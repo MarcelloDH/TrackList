@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrackList</title>
+
+    <!-- ENLACE A GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- ENLACE PARA ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- ENLACE A CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <div class="contenedor encabezado-contenido">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Logo de TrackList">
+                    <h1>TrackList</h1>
+                </a>
+            </div>
+
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="eladio.html">Eladio Carrión</a></li>
+                    <li><a href="albums.html">Álbumes</a></li>
+                    <li><a href="about.html">Sobre mí</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+    <main>
+
+        <!-- BIENVENIDA -->
+        <section class="hero">
+            <div class="contenedor hero-contenido">
+                <div class="hero-texto">
+                    <p class="etiqueta">Mi Hobby: Escuchar Música</p>
+                    <h2>Descubre la música que define mis gustos y mi estilo</h2>
+                    <p>
+                        Bienvenido a TrackList, un sitio donde comparto mi pasión por la música.
+                        Aquí encontrarás artistas que me gustan, recomendaciones, reseñas y contenido
+                        relacionado con mis géneros favoritos como el trap, el hip-hop, el reggaetón y más.
+                    </p>
+                    <a href="about.html" class="boton">Sobre el autor</a>
+                </div>
+
+                <div class="hero-imagen">
+                    <img src="img/hero.jpg" alt="Imagen principal del sitio TrackList">
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE EL BLOG -->
+        <section class="sobre-blog" id="blog">
+            <div class="contenedor">
+                <div class="titulo-seccion">
+                    <p class="etiqueta">Sobre el sitio</p>
+                    <h2>¿Qué encontrarás en TrackList?</h2>
+                </div>
+
+                <div class="grid-blog">
+                    <article class="card-info">
+                        <i class="fa-solid fa-compact-disc"></i>
+                        <h3>Reseñas</h3>
+                        <p>
+                            Opiniones personales sobre álbumes, canciones y proyectos musicales
+                            que me parecen interesantes o importantes.
+                        </p>
+                    </article>
+
+                    <article class="card-info">
+                        <i class="fa-solid fa-microphone"></i>
+                        <h3>Artistas</h3>
+                        <p>
+                            Espacios dedicados a artistas que admiro, destacando su estilo,
+                            trayectoria y el impacto que han tenido en la música.
+                        </p>
+                    </article>
+
+                    <article class="card-info">
+                        <i class="fa-solid fa-headphones"></i>
+                        <h3>Playlists</h3>
+                        <p>
+                            Recomendaciones de música para diferentes momentos, como estudiar,
+                            entrenar, relajarse o simplemente pasar un buen rato.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ARTISTA DESTACADO -->
+        <section class="destacado">
+            <div class="contenedor destacado-contenido">
+                <div class="destacado-imagen">
+                    <img src="img/eladio.png" alt="Imagen de Eladio Carrión">
+                </div>
+
+                <div class="destacado-texto">
+                    <p class="etiqueta">Artista destacado</p>
+                    <h2>Eladio Carrión</h2>
+                    <p>
+                        Eladio Carrión es uno de mis artistas favoritos por su estilo auténtico,
+                        su flow y la manera en que ha evolucionado dentro del trap latino.
+                        Su música combina energía, letras memorables y una identidad muy marcada.
+                    </p>
+                    <p>
+                        En esta entrada del blog hablo sobre quién es, qué lo hace diferente
+                        y por qué se ha convertido en una figura importante dentro de la escena urbana.
+                    </p>
+                    <a href="eladio.html" class="boton-secundario">Leer más sobre Eladio</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATEGORÍAS -->
+        <section class="categorias" id="categorias">
+            <div class="contenedor">
+                <div class="titulo-seccion">
+                    <p class="etiqueta">Mis Gustos Musicales</p>
+                    <h2>Categorías Principales</h2>
+                </div>
+
+                <div class="grid-categorias">
+                    <div class="categoria">Hip-hop</div>
+                    <div class="categoria">Trap</div>
+                    <div class="categoria">Reggaetón</div>
+                    <div class="categoria">Urbano</div>
+                    <div class="categoria">Playlists</div>
+                    <div class="categoria">Artistas</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="contenedor footer-contenido">
+            <p>TrackList © 2026 | Diseñado por Marcello Dominguez</p>
+        </div>
+    </footer>
+
+</body>
+</html>

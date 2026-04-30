@@ -1,0 +1,936 @@
+:root {
+    /* Colores principales */
+    --noche: #1A1A2E;
+    --violeta-oscuro: #2D1B4E;
+    --purpura: #9F5CE6;
+    --lavanda: #D1B3F5;
+    --crema-lila: #F5F0FF;
+    --blanco: #FFFFFF;
+
+    /* Color para textos secundarios */
+    --gris-suave: #d9d9e6;
+
+    /* Tipografías */
+    --titulos: "Space Grotesk", sans-serif;
+    --texto: "Inter", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--texto);
+    background-color: var(--noche);
+    color: var(--blanco);
+    line-height: 1.6;
+}
+
+/* ------- CLASE GENERAL PARA CENTRAR CONTENIDO --------- */
+.contenedor {
+    width: min(120rem, 90%);
+    margin: 0 auto;
+}
+
+/* -------- ESTILOS GENERALES DE TEXTO --------------- */
+h1, h2, h3 {
+    font-family: var(--titulos);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+    border-radius: 1.2rem;
+}
+
+/* ---------- ENCABEZADO ----------------- */
+.encabezado {
+    background-color: var(--violeta-oscuro);
+    padding: 2rem 0;
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.1);
+}
+
+.encabezado-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.logo img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+}
+
+.logo h1 {
+    font-size: 3rem;
+    color: var(--blanco);
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo a:hover {
+    color: inherit;
+}
+
+.menu ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.menu a {
+    font-size: 1.6rem;
+    color: var(--blanco);
+    font-family: var(--titulos);
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: var(--lavanda);
+}
+
+/* ------------ SECCIÓN HERO ------------------- */
+.hero {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, var(--noche), var(--violeta-oscuro));
+}
+
+.hero-contenido {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 4rem;
+}
+
+.hero-texto h2 {
+    font-size: 5rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+.hero-texto p {
+    font-size: 1.7rem;
+    color: var(--gris-suave);
+    margin-bottom: 2rem;
+}
+
+.etiqueta {
+    display: inline-block;
+    background-color: var(--purpura);
+    color: var(--blanco);
+    padding: 0.8rem 1.6rem;
+    border-radius: 2rem;
+    font-family: var(--titulos);
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.hero-imagen img {
+    min-height: 35rem;
+    object-fit: cover;
+}
+
+/* -------- BOTONES ------------------- */
+.boton,
+.boton-secundario {
+    display: inline-block;
+    padding: 1.2rem 2.4rem;
+    border-radius: 0.8rem;
+    font-size: 1.5rem;
+    font-family: var(--titulos);
+    transition: 0.3s;
+}
+
+.boton {
+    background-color: var(--purpura);
+    color: var(--blanco);
+}
+
+.boton:hover {
+    background-color: var(--lavanda);
+    color: var(--noche);
+}
+
+.boton-secundario {
+    background-color: transparent;
+    color: var(--blanco);
+    border: 0.2rem solid var(--lavanda);
+}
+
+.boton-secundario:hover {
+    background-color: var(--lavanda);
+    color: var(--noche);
+}
+
+/* ------------- TÍTULOS DE SECCIÓN ----------------- */
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.titulo-seccion h2 {
+    font-size: 3.6rem;
+}
+
+/* ----------- SECCIÓN SOBRE EL BLOG ------------------ */
+.sobre-blog {
+    padding: 6rem 0;
+    background-color: var(--noche);
+}
+
+.grid-blog {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.card-info {
+    background-color: var(--violeta-oscuro);
+    padding: 3rem;
+    border-radius: 1.6rem;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card-info:hover {
+    transform: translateY(-0.5rem);
+}
+
+.card-info i {
+    font-size: 3rem;
+    color: var(--lavanda);
+    margin-bottom: 1.5rem;
+}
+
+.card-info h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.card-info p {
+    font-size: 1.5rem;
+    color: var(--gris-suave);
+}
+
+/* ------------ SECCIÓN DESTACADO ------------------ */
+.destacado {
+    padding: 6rem 0;
+    background-color: var(--violeta-oscuro);
+}
+
+.destacado-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    align-items: center;
+    gap: 4rem;
+}
+
+.destacado-imagen img {
+    min-height: 40rem;
+    object-fit: cover;
+}
+
+.destacado-texto h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.destacado-texto p {
+    font-size: 1.7rem;
+    color: var(--gris-suave);
+    margin-bottom: 1.8rem;
+}
+
+/* ---------- SECCIÓN CATEGORÍAS ---------------- */
+.categorias {
+    padding: 6rem 0;
+    background-color: var(--noche);
+}
+
+.grid-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.categoria {
+    background-color: var(--purpura);
+    color: var(--blanco);
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1.2rem;
+    font-family: var(--titulos);
+    font-size: 1.8rem;
+    transition: 0.3s;
+}
+
+.categoria:hover {
+    background-color: var(--lavanda);
+    color: var(--noche);
+}
+
+/* ------------- FOOTER ---------------- */
+.footer {
+    background-color: #120f22;
+    padding: 2.5rem 0;
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer p {
+    font-size: 1.4rem;
+    color: var(--gris-suave);
+}
+
+/* ---------- RESPONSIVE PARA TABLET -------------- */
+@media (max-width: 1024px) {
+    .hero-contenido,
+    .destacado-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-texto h2 {
+        font-size: 4.2rem;
+    }
+
+    .grid-blog {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-categorias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .encabezado-contenido {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu ul {
+        flex-wrap: wrap;
+    }
+}
+
+/* ---------- RESPONSIVE PARA MÓVIL ----------------- */
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 2.4rem;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero {
+        padding: 4rem 0;
+    }
+
+    .hero-texto h2 {
+        font-size: 3.2rem;
+    }
+
+    .hero-texto p,
+    .destacado-texto p,
+    .card-info p {
+        font-size: 1.5rem;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 2.8rem;
+    }
+
+    .grid-blog,
+    .grid-categorias {
+        grid-template-columns: 1fr;
+    }
+
+    .destacado-texto h2 {
+        font-size: 3rem;
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+
+
+/* ----------- HERO DE LA PÁGINA DE ELADIO ------------- */
+.hero-post {
+    padding: 7rem 0 5rem 0;
+    text-align: center;
+    background: linear-gradient(135deg, var(--violeta-oscuro), var(--noche));
+}
+
+.hero-post-contenido {
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+.hero-post h2 {
+    font-size: 4.8rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.intro-post {
+    font-size: 1.8rem;
+    color: var(--gris-suave);
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+/* --------- IMAGEN PRINCIPAL DEL POST ------------------- */
+.imagen-principal-post {
+    padding: 4rem 0;
+    background-color: var(--noche);
+}
+
+.imagen-principal-post img {
+    width: 100%;
+    max-height: 55rem;
+    object-fit: cover;
+    border-radius: 1.6rem;
+    box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.3);
+}
+
+/* --------CONTENIDO PRINCIPAL DEL POST ------------------- */
+.contenido-post {
+    padding: 6rem 0;
+    background-color: var(--noche);
+}
+
+.contenedor-post {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* ------- TEXTO DEL ARTÍCULO ------------------ */
+.texto-post {
+    background-color: var(--violeta-oscuro);
+    padding: 3rem;
+    border-radius: 1.6rem;
+}
+
+.texto-post h3 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--blanco);
+}
+
+.texto-post p {
+    font-size: 1.7rem;
+    color: var(--gris-suave);
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+/* --------- CAJA LATERAL DE INFORMACIÓN ------------------- */
+.info-extra {
+    background-color: var(--violeta-oscuro);
+    padding: 3rem;
+    border-radius: 1.6rem;
+    position: sticky;
+    top: 2rem;
+}
+
+.info-extra h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.info-extra ul {
+    margin-bottom: 2.5rem;
+}
+
+.info-extra li {
+    font-size: 1.6rem;
+    color: var(--gris-suave);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.info-extra strong {
+    color: var(--blanco);
+}
+
+/* -------- SECCIÓN DE ÁLBUMES ----------------- */
+.albumes {
+    padding: 6rem 0;
+    background-color: var(--violeta-oscuro);
+}
+
+.grid-albumes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.card-album {
+    background-color: var(--noche);
+    padding: 2rem;
+    border-radius: 1.6rem;
+    transition: 0.3s;
+}
+
+.card-album:hover {
+    transform: translateY(-0.5rem);
+}
+
+.card-album img {
+    width: 100%;
+    height: 24rem;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+}
+
+.card-album h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.card-album p {
+    font-size: 1.5rem;
+    color: var(--gris-suave);
+}
+
+/* ------ SECCIÓN DEL VIDEO ------ */
+
+.video-post {
+    padding: 6rem 0;
+    background-color: var(--noche);
+}
+
+.video-contenedor-local {
+    width: 100%;
+    max-width: 700px; 
+    margin: 0 auto;     
+    border-radius: 1.6rem;
+    overflow: hidden;
+    box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.3);
+}
+
+.video-contenedor-local video {
+    width: 100%;
+    display: block;
+    border-radius: 1.6rem;
+}
+
+.titulo-reproduccion {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.titulo-reproduccion h2 {
+    font-size: 3.2rem;
+    color: var(--blanco);
+    margin-bottom: 1rem;
+}
+
+/* ------- RESPONSIVE PARA TABLET ----------------- */
+@media (max-width: 1024px) {
+    .hero-post h2 {
+        font-size: 4rem;
+    }
+
+    .contenedor-post {
+        grid-template-columns: 1fr;
+    }
+
+    .info-extra {
+        position: static;
+    }
+
+    .grid-albumes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ---------- RESPONSIVE PARA MÓVIL -------------------- */
+@media (max-width: 768px) {
+    .hero-post {
+        padding: 5rem 0 4rem 0;
+    }
+
+    .hero-post h2 {
+        font-size: 3.2rem;
+    }
+
+    .intro-post {
+        font-size: 1.6rem;
+    }
+
+    .texto-post,
+    .info-extra {
+        padding: 2.2rem;
+    }
+
+    .texto-post h3,
+    .info-extra h3 {
+        font-size: 2.4rem;
+    }
+
+    .texto-post p,
+    .info-extra li {
+        font-size: 1.5rem;
+    }
+
+    .grid-albumes {
+        grid-template-columns: 1fr;
+    }
+
+    .card-album img {
+        height: 22rem;
+    }
+}
+
+
+
+
+
+/* ------- PÁGINA DE ÁLBUMES FAVORITOS -------- */
+.albumes-favoritos {
+    padding: 6rem 0;
+    background-color: var(--noche);
+}
+
+.grid-albumes-favoritos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+/* ------- CARD GRANDE DE CADA ÁLBUM ------------ */
+.album-favorito {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 3rem;
+    align-items: center;
+    background-color: var(--violeta-oscuro);
+    padding: 2.5rem;
+    border-radius: 1.8rem;
+    box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.25);
+}
+
+.album-favorito-imagen img {
+    width: 100%;
+    height: 32rem;
+    object-fit: cover;
+    border-radius: 1.4rem;
+}
+
+.album-favorito-texto h3 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--blanco);
+}
+
+.album-favorito-texto p {
+    font-size: 1.7rem;
+    color: var(--gris-suave);
+    margin-bottom: 1.6rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* --------- SECCIÓN FINAL / CIERRE ------------------ */
+.cierre-albums {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, var(--violeta-oscuro), var(--noche));
+}
+
+.cierre-albums-contenido {
+    max-width: 85rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cierre-albums-contenido h2 {
+    font-size: 3.8rem;
+    margin-bottom: 2rem;
+    color: var(--blanco);
+}
+
+.cierre-albums-contenido p {
+    font-size: 1.7rem;
+    color: var(--gris-suave);
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+}
+
+/* ----- RESPONSIVE PARA TABLET ------------ */
+@media (max-width: 1024px) {
+    .album-favorito {
+        grid-template-columns: 1fr;
+    }
+
+    .album-favorito-imagen img {
+        height: 28rem;
+    }
+
+    .album-favorito-texto h3 {
+        font-size: 2.6rem;
+    }
+}
+
+/* ----- RESPONSIVE PARA MÓVIL ------------ */
+@media (max-width: 768px) {
+    .albumes-favoritos {
+        padding: 4rem 0;
+    }
+
+    .album-favorito {
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .album-favorito-imagen img {
+        height: 24rem;
+    }
+
+    .album-favorito-texto h3 {
+        font-size: 2.4rem;
+    }
+
+    .album-favorito-texto p {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    .cierre-albums {
+        padding: 4rem 0;
+    }
+
+    .cierre-albums-contenido h2 {
+        font-size: 2.8rem;
+    }
+
+    .cierre-albums-contenido p {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+/* ------ SECCIÓN SOBRE MÍ ------------- */
+.sobre-mi {
+    padding: 6rem 0;
+    background-color: var(--noche);
+}
+
+.sobre-mi-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.sobre-mi-imagen img {
+    width: 100%;
+    height: 45rem;
+    object-fit: cover;
+    border-radius: 1.6rem;
+}
+
+.sobre-mi-texto h2 {
+    font-size: 3.8rem;
+    margin-bottom: 2rem;
+}
+
+.sobre-mi-texto p {
+    font-size: 1.7rem;
+    color: var(--gris-suave);
+    margin-bottom: 1.6rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* ------- GÉNEROS MUSICALES -------------- */
+.gustos-musicales {
+    padding: 6rem 0;
+    background-color: var(--violeta-oscuro);
+}
+
+.grid-gustos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.gusto {
+    background-color: var(--purpura);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 1.2rem;
+    font-size: 1.8rem;
+    font-family: var(--titulos);
+    transition: 0.3s;
+}
+
+.gusto:hover {
+    background-color: var(--lavanda);
+    color: var(--noche);
+}
+
+/* ------- ARTISTAS FAVORITOS -------------- */
+.artistas-favoritos {
+    padding: 6rem 0;
+    background-color: var(--noche);
+}
+
+.grid-artistas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.card-artista {
+    background-color: var(--violeta-oscuro);
+    padding: 2.5rem;
+    border-radius: 1.6rem;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card-artista:hover {
+    transform: translateY(-0.5rem);
+}
+
+.card-artista i {
+    font-size: 3rem;
+    color: var(--lavanda);
+    margin-bottom: 1.5rem;
+}
+
+.card-artista h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.card-artista p {
+    font-size: 1.5rem;
+    color: var(--gris-suave);
+}
+
+/* ----- SECCIÓN FINAL / CIERRE ----------------- */
+.cierre-about {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, var(--violeta-oscuro), var(--noche));
+}
+
+.cierre-about-contenido {
+    max-width: 85rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cierre-about-contenido h2 {
+    font-size: 3.6rem;
+    margin-bottom: 2rem;
+}
+
+.cierre-about-contenido p {
+    font-size: 1.7rem;
+    color: var(--gris-suave);
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+}
+
+/* ------ RESPONSIVE PARA TABLET -------------- */
+@media (max-width: 1024px) {
+
+    .sobre-mi-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-gustos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-artistas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* -------- RESPONSIVE PARA MÓVIL ------------------- */
+@media (max-width: 768px) {
+
+    .sobre-mi {
+        padding: 4rem 0;
+    }
+
+    .sobre-mi-imagen img {
+        height: 28rem;
+    }
+
+    .sobre-mi-texto h2 {
+        font-size: 2.8rem;
+    }
+
+    .sobre-mi-texto p {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    .grid-gustos {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-artistas {
+        grid-template-columns: 1fr;
+    }
+
+    .cierre-about {
+        padding: 4rem 0;
+    }
+
+    .cierre-about-contenido h2 {
+        font-size: 2.6rem;
+    }
+
+    .cierre-about-contenido p {
+        font-size: 1.5rem;
+    }
+
+}
+
